@@ -26,8 +26,12 @@
       <p class="text-muted">
         <strong>Id:</strong> {{ car.id }}
       </p>
+      <a href="{% url 'taxi:car-update' pk=car.pk %}"
+         class="btn btn-sm btn-outline-secondary">Update</a>
+      <a href="{% url 'taxi:car-delete' pk=car.pk %}"
+         class="btn btn-sm btn-outline-danger">Delete</a>
     {% empty %}
       <p>No cars!</p>
     {% endfor %}
   </div>
-{% endblock %}
+{% endblock content %}
